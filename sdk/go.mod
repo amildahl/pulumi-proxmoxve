@@ -1,4 +1,4 @@
-module github.com/muhlba91/pulumi-proxmoxve/sdk
+module github.com/amildahl/pulumi-proxmoxve/sdk/v2
 
 go 1.18
 

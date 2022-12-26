@@ -19,8 +19,8 @@ package main
 import (
 	_ "embed"
 
-	proxmoxve "github.com/muhlba91/pulumi-proxmoxve/provider"
-	"github.com/muhlba91/pulumi-proxmoxve/provider/pkg/version"
+	proxmoxve "github.com/amildahl/pulumi-proxmoxve/provider"
+	"github.com/amildahl/pulumi-proxmoxve/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 )
 

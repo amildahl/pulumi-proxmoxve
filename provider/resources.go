@@ -19,7 +19,7 @@ import (
 	"path/filepath"
 
 	"github.com/bpg/terraform-provider-proxmox/proxmoxtf"
-	"github.com/muhlba91/pulumi-proxmoxve/provider/pkg/version"
+	"github.com/amildahl/pulumi-proxmoxve/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
@@ -61,10 +61,10 @@ func Provider() tfbridge.ProviderInfo {
 		Publisher:            "Daniel Muehlbachler-Pietrzykowski",
 		Keywords:             []string{"pulumi", "proxmox", "proxmoxve"},
 		License:              "Apache-2.0",
-		Homepage:             "https://github.com/muhlba91/pulumi-proxmoxve",
-		Repository:           "https://github.com/muhlba91/pulumi-proxmoxve",
+		Homepage:             "https://github.com/amildahl/pulumi-proxmoxve",
+		Repository:           "https://github.com/amildahl/pulumi-proxmoxve",
 		GitHubOrg:            "bpg",
-		PluginDownloadURL:    "github://api.github.com/muhlba91/pulumi-proxmoxve",
+		PluginDownloadURL:    "github://api.github.com/amildahl/pulumi-proxmoxve",
 		Config:               map[string]*tfbridge.SchemaInfo{},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
@@ -110,7 +110,7 @@ func Provider() tfbridge.ProviderInfo {
 			"proxmox_virtual_environment_roles":  {Tok: tfbridge.MakeDataSource(mainPkg, permissionMod, "getRoles")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-			PackageName: "@muhlba91/pulumi-proxmoxve",
+			PackageName: "@amildahl/pulumi-proxmoxve",
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
 			},
@@ -126,7 +126,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/muhlba91/pulumi-%[1]s/sdk/", mainPkg),
+				fmt.Sprintf("github.com/amildahl/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,

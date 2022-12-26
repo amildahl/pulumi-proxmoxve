@@ -53,7 +53,7 @@ namespace Pulumi.ProxmoxVE
         {
             var dst = src ?? new global::Pulumi.InvokeOptions{};
             dst.Version = src?.Version ?? Version;
-            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/muhlba91/pulumi-proxmoxve";
+            dst.PluginDownloadURL = src?.PluginDownloadURL ?? "github://api.github.com/amildahl/pulumi-proxmoxve";
             return dst;
         }
 

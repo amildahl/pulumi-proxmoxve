@@ -8,9 +8,9 @@ layout: installation
 
 The Proxmox Virtual Environment (Proxmox VE) provider is available as a package in all Pulumi languages:
 
-* JavaScript/TypeScript: [`@muhlba91/pulumi-proxmoxve`](https://www.npmjs.com/package/@muhlba91/pulumi-proxmoxve)
+* JavaScript/TypeScript: [`@amildahl/pulumi-proxmoxve`](https://www.npmjs.com/package/@amildahl/pulumi-proxmoxve)
 * Python: [`pulumi-proxmoxve`](https://pypi.org/project/pulumi-proxmoxve/)
-* Go: [`github.com/muhlba91/pulumi-proxmoxve/sdk/v3/go/vsphere`](https://github.com/muhlba91/pulumi-proxmoxve)
+* Go: [`github.com/amildahl/pulumi-proxmoxve/sdk/v3/go/vsphere`](https://github.com/amildahl/pulumi-proxmoxve)
 * .NET: [`Pulumi.ProxmoxVE`](https://www.nuget.org/packages/Pulumi.ProxmoxVE)
 
 ## Configuring Credentials

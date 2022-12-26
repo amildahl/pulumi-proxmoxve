@@ -1654,6 +1654,7 @@ type ContainerNetworkInterface struct {
 	Bridge     *string  `pulumi:"bridge"`
 	Enabled    *bool    `pulumi:"enabled"`
 	MacAddress *string  `pulumi:"macAddress"`
+	Mtu        *int     `pulumi:"mtu"`
 	Name       string   `pulumi:"name"`
 	RateLimit  *float64 `pulumi:"rateLimit"`
 	VlanId     *int     `pulumi:"vlanId"`
@@ -1674,6 +1675,7 @@ type ContainerNetworkInterfaceArgs struct {
 	Bridge     pulumi.StringPtrInput  `pulumi:"bridge"`
 	Enabled    pulumi.BoolPtrInput    `pulumi:"enabled"`
 	MacAddress pulumi.StringPtrInput  `pulumi:"macAddress"`
+	Mtu        pulumi.IntPtrInput     `pulumi:"mtu"`
 	Name       pulumi.StringInput     `pulumi:"name"`
 	RateLimit  pulumi.Float64PtrInput `pulumi:"rateLimit"`
 	VlanId     pulumi.IntPtrInput     `pulumi:"vlanId"`
@@ -1740,6 +1742,10 @@ func (o ContainerNetworkInterfaceOutput) Enabled() pulumi.BoolPtrOutput {
 
 func (o ContainerNetworkInterfaceOutput) MacAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ContainerNetworkInterface) *string { return v.MacAddress }).(pulumi.StringPtrOutput)
+}
+
+func (o ContainerNetworkInterfaceOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ContainerNetworkInterface) *int { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
 func (o ContainerNetworkInterfaceOutput) Name() pulumi.StringOutput {

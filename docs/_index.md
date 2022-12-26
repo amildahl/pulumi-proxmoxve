@@ -14,7 +14,7 @@ containers using [Proxmox VE](https://www.proxmox.com/en/proxmox-ve).
 {{% choosable language javascript %}}
 
 ```javascript
-const proxmox = require("@muhlba91/pulumi-proxmoxve")
+const proxmox = require("@amildahl/pulumi-proxmoxve")
 
 const virtualMachine = new proxmox.vm.VirtualMachine('vm', {
     nodeName: 'pve1',
@@ -86,7 +86,7 @@ const virtualMachine = new proxmox.vm.VirtualMachine('vm', {
 {{% /choosable %}} {{% choosable language typescript %}}
 
 ```typescript
-import * as proxmox from "@muhlba91/pulumi-proxmoxve";
+import * as proxmox from "@amildahl/pulumi-proxmoxve";
 
 const virtualMachine = new proxmox.vm.VirtualMachine('vm', {
     nodeName: 'pve1',

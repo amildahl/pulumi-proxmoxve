@@ -66,6 +66,8 @@ type VirtualMachine struct {
 	Started pulumi.BoolPtrOutput `pulumi:"started"`
 	// Whether to enable the USB tablet device
 	TabletDevice pulumi.BoolPtrOutput `pulumi:"tabletDevice"`
+	// Tags of the virtual machine. This is only meta information.
+	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	// Whether to create a template
 	Template pulumi.BoolPtrOutput `pulumi:"template"`
 	// Clone VM timeout
@@ -171,6 +173,8 @@ type virtualMachineState struct {
 	Started *bool `pulumi:"started"`
 	// Whether to enable the USB tablet device
 	TabletDevice *bool `pulumi:"tabletDevice"`
+	// Tags of the virtual machine. This is only meta information.
+	Tags []string `pulumi:"tags"`
 	// Whether to create a template
 	Template *bool `pulumi:"template"`
 	// Clone VM timeout
@@ -244,6 +248,8 @@ type VirtualMachineState struct {
 	Started pulumi.BoolPtrInput
 	// Whether to enable the USB tablet device
 	TabletDevice pulumi.BoolPtrInput
+	// Tags of the virtual machine. This is only meta information.
+	Tags pulumi.StringArrayInput
 	// Whether to create a template
 	Template pulumi.BoolPtrInput
 	// Clone VM timeout
@@ -313,6 +319,8 @@ type virtualMachineArgs struct {
 	Started *bool `pulumi:"started"`
 	// Whether to enable the USB tablet device
 	TabletDevice *bool `pulumi:"tabletDevice"`
+	// Tags of the virtual machine. This is only meta information.
+	Tags []string `pulumi:"tags"`
 	// Whether to create a template
 	Template *bool `pulumi:"template"`
 	// Clone VM timeout
@@ -379,6 +387,8 @@ type VirtualMachineArgs struct {
 	Started pulumi.BoolPtrInput
 	// Whether to enable the USB tablet device
 	TabletDevice pulumi.BoolPtrInput
+	// Tags of the virtual machine. This is only meta information.
+	Tags pulumi.StringArrayInput
 	// Whether to create a template
 	Template pulumi.BoolPtrInput
 	// Clone VM timeout
@@ -614,6 +624,11 @@ func (o VirtualMachineOutput) Started() pulumi.BoolPtrOutput {
 // Whether to enable the USB tablet device
 func (o VirtualMachineOutput) TabletDevice() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VirtualMachine) pulumi.BoolPtrOutput { return v.TabletDevice }).(pulumi.BoolPtrOutput)
+}
+
+// Tags of the virtual machine. This is only meta information.
+func (o VirtualMachineOutput) Tags() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *VirtualMachine) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
 // Whether to create a template

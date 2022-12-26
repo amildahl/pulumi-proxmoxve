@@ -119,7 +119,7 @@ namespace Pulumi.ProxmoxVE
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "github://api.github.com/muhlba91/pulumi-proxmoxve",
+                PluginDownloadURL = "github://api.github.com/amildahl/pulumi-proxmoxve",
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.

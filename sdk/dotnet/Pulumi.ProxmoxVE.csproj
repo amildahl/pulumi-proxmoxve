@@ -6,8 +6,8 @@
     <Company>Daniel Muehlbachler-Pietrzykowski</Company>
     <Description>A Pulumi package for creating and managing Proxmox Virtual Environment cloud resources.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/muhlba91/pulumi-proxmoxve</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/muhlba91/pulumi-proxmoxve</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/amildahl/pulumi-proxmoxve</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/amildahl/pulumi-proxmoxve</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
 
     <TargetFramework>netcoreapp3.1</TargetFramework>

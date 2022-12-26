@@ -1,4 +1,4 @@
-module github.com/muhlba91/pulumi-proxmoxve/provider
+module github.com/amildahl/pulumi-proxmoxve/provider
 
 go 1.18
 

@@ -924,6 +924,7 @@ type VirtualMachineDisk struct {
 	Iothread    *bool                    `pulumi:"iothread"`
 	Size        *int                     `pulumi:"size"`
 	Speed       *VirtualMachineDiskSpeed `pulumi:"speed"`
+	Ssd         *bool                    `pulumi:"ssd"`
 }
 
 // VirtualMachineDiskInput is an input type that accepts VirtualMachineDiskArgs and VirtualMachineDiskOutput values.
@@ -946,6 +947,7 @@ type VirtualMachineDiskArgs struct {
 	Iothread    pulumi.BoolPtrInput             `pulumi:"iothread"`
 	Size        pulumi.IntPtrInput              `pulumi:"size"`
 	Speed       VirtualMachineDiskSpeedPtrInput `pulumi:"speed"`
+	Ssd         pulumi.BoolPtrInput             `pulumi:"ssd"`
 }
 
 func (VirtualMachineDiskArgs) ElementType() reflect.Type {
@@ -1029,6 +1031,10 @@ func (o VirtualMachineDiskOutput) Size() pulumi.IntPtrOutput {
 
 func (o VirtualMachineDiskOutput) Speed() VirtualMachineDiskSpeedPtrOutput {
 	return o.ApplyT(func(v VirtualMachineDisk) *VirtualMachineDiskSpeed { return v.Speed }).(VirtualMachineDiskSpeedPtrOutput)
+}
+
+func (o VirtualMachineDiskOutput) Ssd() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VirtualMachineDisk) *bool { return v.Ssd }).(pulumi.BoolPtrOutput)
 }
 
 type VirtualMachineDiskArrayOutput struct{ *pulumi.OutputState }
@@ -2327,6 +2333,7 @@ type VirtualMachineNetworkDevice struct {
 	Enabled    *bool    `pulumi:"enabled"`
 	MacAddress *string  `pulumi:"macAddress"`
 	Model      *string  `pulumi:"model"`
+	Mtu        *int     `pulumi:"mtu"`
 	RateLimit  *float64 `pulumi:"rateLimit"`
 	VlanId     *int     `pulumi:"vlanId"`
 }
@@ -2347,6 +2354,7 @@ type VirtualMachineNetworkDeviceArgs struct {
 	Enabled    pulumi.BoolPtrInput    `pulumi:"enabled"`
 	MacAddress pulumi.StringPtrInput  `pulumi:"macAddress"`
 	Model      pulumi.StringPtrInput  `pulumi:"model"`
+	Mtu        pulumi.IntPtrInput     `pulumi:"mtu"`
 	RateLimit  pulumi.Float64PtrInput `pulumi:"rateLimit"`
 	VlanId     pulumi.IntPtrInput     `pulumi:"vlanId"`
 }
@@ -2416,6 +2424,10 @@ func (o VirtualMachineNetworkDeviceOutput) MacAddress() pulumi.StringPtrOutput {
 
 func (o VirtualMachineNetworkDeviceOutput) Model() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v VirtualMachineNetworkDevice) *string { return v.Model }).(pulumi.StringPtrOutput)
+}
+
+func (o VirtualMachineNetworkDeviceOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VirtualMachineNetworkDevice) *int { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
 func (o VirtualMachineNetworkDeviceOutput) RateLimit() pulumi.Float64PtrOutput {

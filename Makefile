@@ -1,9 +1,9 @@
 PROJECT_NAME := proxmoxve Package
 
 PACK             := proxmoxve
-ORG              := muhlba91
+ORG              := amildahl
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
-NODE_MODULE_NAME := @muhlba91/pulumi-${PACK}
+NODE_MODULE_NAME := @amildahl/pulumi-${PACK}
 TF_NAME          := ${PACK}
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version

@@ -1,5 +1,5 @@
 {
-    "name": "@muhlba91/pulumi-proxmoxve",
+    "name": "@amildahl/pulumi-proxmoxve",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing Proxmox Virtual Environment cloud resources.",
     "keywords": [
@@ -7,8 +7,8 @@
         "proxmox",
         "proxmoxve"
     ],
-    "homepage": "https://github.com/muhlba91/pulumi-proxmoxve",
-    "repository": "https://github.com/muhlba91/pulumi-proxmoxve",
+    "homepage": "https://github.com/amildahl/pulumi-proxmoxve",
+    "repository": "https://github.com/amildahl/pulumi-proxmoxve",
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc",
@@ -25,6 +25,6 @@
     "pulumi": {
         "resource": true,
         "name": "proxmoxve",
-        "server": "github://api.github.com/muhlba91/pulumi-proxmoxve"
+        "server": "github://api.github.com/amildahl/pulumi-proxmoxve"
     }
 }
